@@ -1,0 +1,21 @@
+$var-white:					#fff !default;
+$var-gray-base:				#333 !default;
+$var-gray-a:				lighten($var-gray-base, 10%) !default; // #4d4d4d
+$var-gray-b:				lighten($var-gray-base, 20%) !default; // #666666
+$var-gray-c:				lighten($var-gray-base, 30%) !default; // #808080
+$var-gray-d:				lighten($var-gray-base, 40%) !default; // #999999
+$var-gray-e:				lighten($var-gray-base, 50%) !default; // #b3b3b3
+$var-gray-f:				lighten($var-gray-base, 60%) !default; // #cccccc
+$var-gray-g:				lighten($var-gray-base, 75%) !default; // #f2f2f2
+
+$var-brand-base:          #E6E6EA !default;
+$var-brand-primary:				#FED766 !default;
+$var-brand-highlight:			#2AB7CA !default;
+$var-brand-action:				#FE4A49 !default;
+
+
+$var-base-font-size:        10;
+$var-btn-jumbo-font-size:   $var-base-font-size * 0.22 + em;
+$var-btn-large-font-size:   $var-base-font-size * 0.18 + em;
+$var-btn-small-font-size:   $var-base-font-size * 0.14 + em;
+$var-btn-tiny-font-size:    $var-base-font-size * 0.12 + em;

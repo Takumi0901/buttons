@@ -1,0 +1,10 @@
+@mixin gradient($grad-base-color, $orientation){
+	background: $grad-base-color;
+	background: -moz-linear-gradient(top,  lighten($grad-base-color, 8%), lighten($grad-base-color, 1%));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$grad-base-color), color-stop(100%,lighten($grad-base-color, 1%)));
+	background: -webkit-linear-gradient(top,  lighten($grad-base-color, 8%),lighten($grad-base-color, 1%));
+	background: -o-linear-gradient(top,  lighten($grad-base-color, 8%),lighten($grad-base-color, 1%));
+	background: -ms-linear-gradient(top,  lighten($grad-base-color, 8%),lighten($grad-base-color, 1%));
+	background: linear-gradient(to bottom,  lighten($grad-base-color, 8%),lighten($grad-base-color, 1%));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($grad-base-color, 8%)', endColorstr='lighten($grad-base-color, 1%)',GradientType=0 );
+}

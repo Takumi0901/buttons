@@ -1,0 +1,174 @@
+/* configs
+--------------------------------------------------------- */
+@import "configs";
+
+/* mixins
+--------------------------------------------------------- */
+@import "mixins/opacity";
+@import "mixins/border-radius";
+@import "mixins/gradient";
+@import "mixins/buttons";
+
+/* btn
+--------------------------------------------------------- */
+.btn{
+	display: inline-block;
+	color: $var-white;
+	border: 0;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background: $var-gray-f;
+	padding: 0 1.4em;
+  height: 40px;
+  line-height: 40px;
+	font-size: 1.4em;
+	outline: none;
+	position: relative; 
+
+	&:link,&:active,&:hover,&:visited{
+		color: $var-white;
+		text-decoration: none;
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+	cursor: not-allowed;
+	@include opacity(.65);
+	}
+
+  .btn__icon--right{
+    margin-left: 0.8em;
+    margin-right: -0.8em;
+  }
+  .btn__icon--left{
+    margin-right: 0.8em;
+    margin-left: -0.8em;
+  }
+
+  .btn__badge--left{
+    background: $var-white;
+    color: $var-gray-d;
+    line-height: 1;
+    margin-right: 0.8em;
+    margin-left: -0.8em;
+    padding: 1px 3px;
+    font-size: 0.7em;
+    @include border-radius(10px);
+  }
+
+  .btn__badge--right{
+    background: $var-white;
+    color: $var-gray-d;
+    line-height: 1;
+    margin-left: 0.8em;
+    margin-right: -0.8em;
+    padding: 1px 3px;
+    font-size: 0.7em;
+    @include border-radius(10px);
+  }
+}
+
+/* btn--block
+--------------------------------------------------------- */
+.btn--block{
+  display: block;
+  width: 100%;
+}
+
+
+/* type flat
+--------------------------------------------------------- */
+.btn--flat--base{
+	@include button-flat-color($var-gray-base, $var-brand-base);
+}
+
+.btn--flat--primary{
+	@include button-flat-color($var-white, $var-brand-primary);
+}
+
+.btn--flat--highlight{
+	@include button-flat-color($var-white, $var-brand-highlight);
+}
+
+.btn--flat--action{
+	@include button-flat-color($var-white, $var-brand-action);
+}
+
+
+/* type border
+--------------------------------------------------------- */
+.btn--border--base{
+	@include button-border-color($var-brand-base, $var-gray-a, $var-white);
+}
+
+.btn--border--primary{
+	@include button-border-color($var-brand-primary, $var-brand-primary, $var-white);
+}
+
+.btn--border--highlight{
+	@include button-border-color($var-brand-highlight, $var-brand-highlight, $var-white);
+}
+
+.btn--border--action{
+	@include button-border-color($var-brand-action, $var-brand-action, $var-white);
+}
+
+
+/* type rounded
+--------------------------------------------------------- */
+.btn--rounded--base{
+	@include button-rounded-color($var-gray-base, $var-brand-base);
+}
+
+.btn--rounded--primary{
+	@include button-rounded-color($var-white, $var-brand-primary);
+}
+
+.btn--rounded--highlight{
+	@include button-rounded-color($var-white, $var-brand-highlight);
+}
+
+.btn--rounded--action{
+	@include button-rounded-color($var-white, $var-brand-action);
+}
+
+
+/* type 3d
+--------------------------------------------------------- */
+.btn--3d--base{
+	@include button-3d-color($var-white, $var-brand-base);
+}
+
+.btn--3d--primary{
+	@include button-3d-color($var-white, $var-brand-primary);
+}
+
+.btn--3d--highlight{
+	@include button-3d-color($var-white, $var-brand-highlight);
+}
+
+.btn--3d--action{
+	@include button-3d-color($var-white, $var-brand-action);
+}
+
+
+/* type size
+--------------------------------------------------------- */
+.btn--jumbo{
+  @include button-size($var-btn-jumbo-font-size, 64px);
+}
+
+.btn--large{
+  @include button-size($var-btn-large-font-size, 56px);
+}
+
+.btn--small{
+  @include button-size($var-btn-small-font-size, 32px);
+}
+
+.btn--tiny{
+  @include button-size($var-btn-small-font-size, 24px);
+}

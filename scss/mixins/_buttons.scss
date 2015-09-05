@@ -1,0 +1,108 @@
+@mixin button-flat-color($base-color, $background) {
+  color: $base-color !important;
+  background-color: $background;
+  border: solid 3px $background;
+  
+  @include border-radius(3px);
+  
+  &:link{
+  	color: $base-color !important;
+  	background-color: $background;
+  }
+  &:hover {
+    background-color: lighten($background, 6%);
+    border: solid 3px lighten($background, 6%);
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+      background-color: $background;
+      border-color: $background;
+  }
+}
+
+@mixin button-border-color($base-color, $text-color, $background) {
+  color: $text-color !important;
+  background-color: $var-white;
+  border: $base-color solid 3px;
+  
+  @include border-radius(3px);
+  
+  &:link{
+  	color: $text-color;
+  	background-color: $var-white;
+  }
+  &:hover {
+    color: $var-white !important;
+    background-color: $base-color;
+    border: $base-color solid 3px;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover{
+      background-color: $background;
+          border-color: $base-color;
+          color: $base-color !important;
+    }
+  }
+}
+
+
+@mixin button-rounded-color($base-color, $background) {
+  color: $base-color !important;
+  @include gradient($background, vertical);
+  border: solid 1px $background;
+  box-shadow:1px 1px $var-gray-g inset;
+  
+  @include border-radius(3px);
+  
+  &:link{
+  	color: $base-color !important;
+  	@include gradient($background, vertical);
+  }
+  &:hover {
+    color: $base-color !important;
+    @include gradient(lighten($background, 5%), vertical);
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover{
+      background-color: $background;
+          border-color: $background;
+    }
+  }
+}
+
+@mixin button-3d-color($base-color, $background) {
+  color: $base-color !important;
+  background: $background;
+  box-shadow:0px 3px darken($background, 15%);
+  
+  @include border-radius(3px);
+  
+  &:link{
+  	color: $base-color !important;
+  	background: $background;
+  }
+  &:hover {
+    color: $var-white !important;
+    background: lighten($background, 5%);
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover{
+      background-color: $background;
+          border-color: $base-color;
+    }
+  }
+}
+
+
+@mixin button-size($base-fs, $height){
+  font-size: $base-fs;
+  line-height: $height;
+  height: $height;
+}
