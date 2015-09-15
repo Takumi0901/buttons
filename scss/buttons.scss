@@ -21,11 +21,12 @@
 	cursor: pointer;
 	background: $var-gray-f;
 	padding: 0 1.4em;
-  height: 40px;
-  line-height: 40px;
-	font-size: 1.4em;
+  	height: $var-btn-default-height;
+  	line-height: $var-btn-default-height;
+	font-size: $var-btn-default-font-size;
 	outline: none;
 	position: relative; 
+	white-space:nowrap;
 
 	&:link,&:active,&:hover,&:visited{
 		color: $var-white;
@@ -48,27 +49,6 @@
     margin-left: -0.8em;
   }
 
-  .btn__badge--left{
-    background: $var-white;
-    color: $var-gray-d;
-    line-height: 1;
-    margin-right: 0.8em;
-    margin-left: -0.8em;
-    padding: 1px 3px;
-    font-size: 0.7em;
-    @include border-radius(10px);
-  }
-
-  .btn__badge--right{
-    background: $var-white;
-    color: $var-gray-d;
-    line-height: 1;
-    margin-left: 0.8em;
-    margin-right: -0.8em;
-    padding: 1px 3px;
-    font-size: 0.7em;
-    @include border-radius(10px);
-  }
 }
 
 /* btn--block
@@ -81,8 +61,8 @@
 
 /* type flat
 --------------------------------------------------------- */
-.btn--flat--base{
-	@include button-flat-color($var-gray-base, $var-brand-base);
+.btn--flat--default{
+	@include button-flat-color($var-gray-c, $var-brand-default);
 }
 
 .btn--flat--primary{
@@ -100,8 +80,8 @@
 
 /* type border
 --------------------------------------------------------- */
-.btn--border--base{
-	@include button-border-color($var-brand-base, $var-gray-a, $var-white);
+.btn--border--default{
+	@include button-border-color($var-brand-default, $var-gray-c, $var-white);
 }
 
 .btn--border--primary{
@@ -119,8 +99,8 @@
 
 /* type rounded
 --------------------------------------------------------- */
-.btn--rounded--base{
-	@include button-rounded-color($var-gray-base, $var-brand-base);
+.btn--rounded--default{
+	@include button-rounded-color($var-gray-c, $var-brand-default);
 }
 
 .btn--rounded--primary{
@@ -138,8 +118,8 @@
 
 /* type 3d
 --------------------------------------------------------- */
-.btn--3d--base{
-	@include button-3d-color($var-white, $var-brand-base);
+.btn--3d--default{
+	@include button-3d-color($var-gray-b, $var-brand-default);
 }
 
 .btn--3d--primary{
@@ -158,17 +138,17 @@
 /* type size
 --------------------------------------------------------- */
 .btn--jumbo{
-  @include button-size($var-btn-jumbo-font-size, 64px);
+  @include button-size($var-btn-jumbo-font-size, $var-btn-jumbo-height);
 }
 
 .btn--large{
-  @include button-size($var-btn-large-font-size, 56px);
+  @include button-size($var-btn-large-font-size, $var-btn-large-height);
 }
 
 .btn--small{
-  @include button-size($var-btn-small-font-size, 32px);
+  @include button-size($var-btn-small-font-size, $var-btn-small-height);
 }
 
 .btn--tiny{
-  @include button-size($var-btn-small-font-size, 24px);
+  @include button-size($var-btn-small-font-size, $var-btn-tiny-height);
 }

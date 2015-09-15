@@ -3,7 +3,7 @@
   background-color: $background;
   border: solid 3px $background;
   
-  @include border-radius(3px);
+  @include border-radius(5px);
   
   &:link{
   	color: $base-color !important;
@@ -26,7 +26,7 @@
   background-color: $var-white;
   border: $base-color solid 3px;
   
-  @include border-radius(3px);
+  @include border-radius(5px);
   
   &:link{
   	color: $text-color;
@@ -53,9 +53,9 @@
   color: $base-color !important;
   @include gradient($background, vertical);
   border: solid 1px $background;
-  box-shadow:1px 1px $var-gray-g inset;
+  box-shadow:1px 1px $var-white inset;
   
-  @include border-radius(3px);
+  @include border-radius(5px);
   
   &:link{
   	color: $base-color !important;
@@ -80,14 +80,14 @@
   background: $background;
   box-shadow:0px 3px darken($background, 15%);
   
-  @include border-radius(3px);
+  @include border-radius(5px);
   
   &:link{
   	color: $base-color !important;
   	background: $background;
   }
   &:hover {
-    color: $var-white !important;
+    color: $base-color !important;
     background: lighten($background, 5%);
   }
   &.disabled,

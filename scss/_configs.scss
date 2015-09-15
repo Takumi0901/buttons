@@ -1,3 +1,4 @@
+/* -- color -- */
 $var-white:					#fff !default;
 $var-gray-base:				#333 !default;
 $var-gray-a:				lighten($var-gray-base, 10%) !default; // #4d4d4d
@@ -8,14 +9,24 @@ $var-gray-e:				lighten($var-gray-base, 50%) !default; // #b3b3b3
 $var-gray-f:				lighten($var-gray-base, 60%) !default; // #cccccc
 $var-gray-g:				lighten($var-gray-base, 75%) !default; // #f2f2f2
 
-$var-brand-base:          #E6E6EA !default;
-$var-brand-primary:				#FED766 !default;
-$var-brand-highlight:			#2AB7CA !default;
-$var-brand-action:				#FE4A49 !default;
+/* -- brand color -- */
+$var-brand-default:          	#E6E6EA !default;
+$var-brand-primary:			#FED766 !default;
+$var-brand-highlight:		#2AB7CA !default;
+$var-brand-action:			#FE4A49 !default;
 
-
+/* -- font-size -- */
 $var-base-font-size:        10;
-$var-btn-jumbo-font-size:   $var-base-font-size * 0.22 + em;
+$var-btn-jumbo-font-size:   $var-base-font-size * 0.20 + em;
 $var-btn-large-font-size:   $var-base-font-size * 0.18 + em;
+$var-btn-default-font-size: $var-base-font-size * 0.16 + em;
 $var-btn-small-font-size:   $var-base-font-size * 0.14 + em;
 $var-btn-tiny-font-size:    $var-base-font-size * 0.12 + em;
+
+/* -- height -- */
+$var-base-height:        	8px;
+$var-btn-jumbo-height:		$var-base-height * 7;
+$var-btn-large-height:		$var-base-height * 6;
+$var-btn-default-height:	$var-base-height * 5;
+$var-btn-small-height:		$var-base-height * 4;
+$var-btn-tiny-height:		$var-base-height * 3;
